@@ -1,0 +1,20 @@
+<div id="sidebar-wrapper" ng-controller="SidebarController">
+  <div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+      <li class="active">
+        <a href="{{baseUrl}}/home">Dashboard
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li><a href="{{baseUrl}}/quote">Quote</a></li>
+      <li><a href="{{baseUrl}}/invoice">Invoice</a></li>
+      <li>
+        <a href="#"
+          ng-click="logout($event);"
+        >
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

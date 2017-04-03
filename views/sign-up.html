@@ -1,0 +1,40 @@
+<div id="header" ng-include src="templates.headerLoggedOut"></div>
+
+<div class="container">
+  <form name="registerForm" ng-submit="submitForm(registerForm.$valid)" class="form-signin">
+    <h2 class="form-signin-heading">Sign Up</h2>
+    <label for="firstName" class="sr-only">First Name</label>
+    <input type="text" id="firstName" class="form-control" name="firstName" placeholder="First name"
+      ng-model="formData.firstName"
+      required
+    >
+
+    <label for="lastName" class="sr-only">Last Name</label>
+    <input type="text" id="lastName" class="form-control" placeholder="Last name"
+      ng-model="formData.lastName"
+      required
+    >
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+      ng-model="formData.email"
+      required
+    >
+    <label for="companyName" class="sr-only">Company name</label>
+    <input type="text" id="companyName" class="form-control" placeholder="Company name (optional)"
+      ng-model="formData.companyName"
+    >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+      ng-model="formData.passw"
+      required
+    >
+
+    <div class="error-box">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">
+      Sign Up
+    </button>
+  </form>
+</div>

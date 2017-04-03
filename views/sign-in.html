@@ -1,0 +1,25 @@
+<div id="header" ng-include src="templates.headerLoggedOut"></div>
+
+<div class="container">
+  <form name="loginForm" ng-submit="submitForm(loginForm.$valid)" class="form-signin">
+    <h2 class="form-signin-heading">Sign in</h2>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+      ng-model="formData.email"
+      required
+    >
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+      ng-model="formData.passw"
+      required
+    >
+
+    <div class="error-box">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit"> Sign in </button>
+  </form>
+</div>
+</div>

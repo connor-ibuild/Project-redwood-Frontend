@@ -1,0 +1,98 @@
+<div id="header" ng-include src="templates.header"></div>
+<div id="sidebar-wrapper" ng-include src="templates.sidebar"></div>
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div class="upper-page">
+    <h1 class="page-header"> New Invoice</h1>
+    <div class="button-container">
+      <button type="button" class="btn  btn-primary">Back To Invoice</button>
+      <!-- <button type="button" class="btn  btn-primary">Invoice Settings</button> -->
+    </div>
+  </div>
+
+  <div class="main-content">
+    <form name="invoiceForm"
+      ng-submit="createInvoice(invoiceForm.$valid)"
+      class="form-invoice"
+    >
+      <input type="text" class="form-control" placeholder="Description"
+        ng-model="invoiceData.clientDescription"
+        required
+      >
+      <br />
+      <h4> From </h4>
+      <input type="text" class="form-control" placeholder="First name"
+        ng-model="invoiceData.firstName"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Last name"
+        ng-model="invoiceData.lasttName"
+        required
+      >
+      <input type="email" class="form-control" placeholder="Email"
+        ng-model="invoiceData.email"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Address"
+        ng-model="invoiceData.address"
+        required
+      >
+      <input type="text" class="form-control" placeholder="City"
+        ng-model="invoiceData.city"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Postcode"
+        ng-model="invoiceData.postcode"
+        required
+      >
+
+      <br />
+      <h4> Client </h4>
+      <input type="text" class="form-control" placeholder="First name"
+        ng-model="invoiceData.clientFirstName"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Last name"
+        ng-model="invoiceData.clientLasttName"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Last name"
+        ng-model="invoiceData.clientEmail"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Phone number"
+        ng-model="invoiceData.clientPhoneNumber"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Address"
+        ng-model="invoiceData.clientAddress"
+        required
+      >
+      <input type="text" class="form-control" placeholder="City"
+        ng-model="invoiceData.clientCity"
+        required
+      >
+      <input type="text" class="form-control" placeholder="Postcode"
+        ng-model="invoiceData.clientPostcode"
+        required
+      >
+
+      <br/>
+      <h4> Date </h4>
+      <input type="text" class="form-control" placeholder="Date"
+        ng-model="invoiceData.date"
+        required
+      >
+      <br/>
+      <h4> Item </h4>
+      <input type="text" class="form-control" placeholder="Item name and description"
+        ng-model="invoiceData.item"
+        required
+      >
+      <br />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Create
+      </button>
+    </form>
+  </div>
+</div>
