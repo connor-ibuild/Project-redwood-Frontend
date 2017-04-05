@@ -11,7 +11,7 @@ var RegisterController = App.controller("RegisterController", function ($scope, 
 
     MyJSON = JSON.stringify($scope.formData);
 
-    $http.post('http://localhost:8888/play/sf-backend/web/app_dev.php/register',
+    $http.post(apiUrl + '/register',
     {
       'JsonData' : MyJSON
     })

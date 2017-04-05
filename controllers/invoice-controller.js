@@ -10,7 +10,7 @@ var InvoiceController = App.controller("InvoiceController", function ($scope, $h
 
     var invoiceData_json = JSON.stringify($scope.invoiceData);
 
-    $http.post('http://localhost:8888/play/sf-backend/web/app_dev.php/create-invoice',
+    $http.post(apiUrl + '/create-invoice',
     {
       'InvoiceData' : invoiceData_json
     })

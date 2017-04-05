@@ -37,6 +37,7 @@ App.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 
 App.run(['$rootScope', function ($rootScope) {
   $rootScope.baseUrl = '/play/project-redwood';
+  $rootScope.apiUrl = 'http://localhost:8888/play/sf-backend/web/app_dev.php';
 
   $rootScope.templates = {
     header: $rootScope.baseUrl + '/views/header.html',

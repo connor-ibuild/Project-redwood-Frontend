@@ -9,7 +9,7 @@ var LoginController = App.controller("LoginController", function ($scope, $http,
 
     var formData_json = JSON.stringify($scope.formData);
 
-    $http.post('http://localhost:8888/play/sf-backend/web/app_dev.php/login',
+    $http.post(apiUrl + '/login',
     {
       'LoginData' : formData_json
     })

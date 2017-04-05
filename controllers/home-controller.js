@@ -3,7 +3,7 @@ var HomeController = App.controller("HomeController", function ($scope, $http, $
   var key = $cookies.get('project-redwood-key');
 
   // get user data
-  $http.get('http://localhost:8888/play/sf-backend/web/app_dev.php/user-data', {
+  $http.get(apiUrl + '/user-data', {
     headers: {'key' : key}
   })
     .then(function (response) {

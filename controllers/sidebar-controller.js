@@ -4,7 +4,7 @@ var SidebarController = App.controller("SidebarController", function ($scope, $h
     $event.preventDefault();
     var key = $cookies.get('project-redwood-key');
 
-    $http.get('http://localhost:8888/play/sf-backend/web/app_dev.php/logout',
+    $http.get(apiUrl + '/logout',
     {
       headers: {'key' : key}
     })
